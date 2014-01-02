@@ -1,0 +1,22 @@
+{
+  "name": "studying",
+  "version": "0.0.1",
+  "authors": [
+    "William Oliveira <sudowilliam@gmail.com>"
+  ],
+  "description": "Studying AngularJS",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/bower/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.2.6",
+    "bootstrap": "~3.0.3"
+  }
+}
