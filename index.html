@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="App">
+  <head>
+    <title>Studying AngularJS</title>
+    <link rel="stylesheet" type="text/css" href="assets/bower/bootstrap/dist/css/bootstrap.min.css">
+    <script type="text/javascript" src="assets/bower/angular/angular.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/controllers/cartController.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <br/>
+
+      <div class="jumbotron">
+        <h1>Cart Example</h1>
+        <p>Simple app to show how to implement a basic cart using AngularJS</p>
+      </div>
+
+      <div ng-controller="CartController">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Product name</th>
+              <th>Unit. Price</th>
+              <th>Final price</th>
+              <th>Qty</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr ng-repeat="product in products">
+              <td>{{ product.name }}</td>
+              <td>{{ product.price | currency }}</td>
+              <td>{{ product.price * product.qty | currency }}</td>
+              <td><input type="text" class="form-control" ng-model="product.qty"></td>
+              <td><button type="button" class="btn btn-primary" ng-click="remove($index)">Remove</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
