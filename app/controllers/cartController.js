@@ -1,5 +1,6 @@
-App.controller('CartController', function ($scope) { 
+App.controller('CartController', function (Products, $scope) { 
   $scope.bill = {};
+  $scope.products = Products.query();
 
   $scope.totalCart = function() {
     var total = 0;
