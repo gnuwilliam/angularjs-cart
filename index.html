@@ -35,7 +35,7 @@
               <td>{{ product.price | currency }}</td>
               <td>{{ product.price * product.qty | currency }}</td>
               <td><input type="text" class="form-control" ng-model="product.qty"></td>
-              <td><button type="button" class="btn btn-primary" ng-click="remove($index)">Remove</button></td>
+              <td><button type="button" class="btn btn-danger" ng-click="remove($index)">Remove</button></td>
             </tr>
           </tbody>
         </table>
