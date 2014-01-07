@@ -14,6 +14,10 @@ App.controller('CartController', function ($scope) {
     return $scope.totalCart() - $scope.bill.discount;
   }
 
+  function calculateDiscount(newValue, oldValue, scope) {
+    $scope.bill.discount = newValue > 100 ? 10 : 0;
+  }
+
   $scope.remove = function(index) {
     $scope.products.splice(index, 1);
   }
