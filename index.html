@@ -36,6 +36,12 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="well">
+          <p>Total <b>{{ totalCart() | currency }}</b></p>
+          <p>Discount <b>{{ bill.discount | currency }}</b></p>
+          <p>Subtotal <b>{{ subtotal() | currency }}</b></p>
+        </div>
       </div>
     </div>
 
