@@ -6,8 +6,12 @@ App.controller('CartController', function ($scope) {
     for (var i = 0, len = $scope.products.length; i < len; i++) {
       total = total + $scope.products[i].price * $scope.products[i].qty;
     }
-    
+
     return total;
+  }
+
+  $scope.subtotal = function() {
+    return $scope.totalCart() - $scope.bill.discount;
   }
 
   $scope.remove = function(index) {
